@@ -1,0 +1,140 @@
+@media (min-width: 320px) {
+    .graphic__image{
+        width: 100%;
+    }
+
+    .main__box{
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas: 
+        "one two"
+        "three four"
+        "graphic graphic"
+        ;
+        gap: 2rem;
+    }
+
+    .graphic__box{
+        grid-area: graphic;
+    }
+
+    .span__color{
+        color: var(--dark-red);
+    }
+
+    .aside__box{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px){
+    .aside__box{
+        grid-area: aside;
+    }
+
+    .one{
+        grid-area: one;
+    }
+
+    .two{
+        grid-area: two;
+    }
+
+    .three{
+        grid-area: three;
+    }
+
+    .four{
+        grid-area: four;
+    }
+
+    .main__box{
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas: 
+        "one two aside"
+        "three four aside"
+        "graphic graphic aside"
+        ;
+        gap: 2rem;
+    }
+
+    .aside__box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside__filter{
+        display: flex;
+        gap: 2rem;
+        font-size: 2vmin;
+        color: var(--dark-gray);
+    }
+
+    .aside__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    .active{
+        text-decoration: underline;
+    }
+
+    .list__item{
+        padding: 1rem;
+        font-size: 1.5vmin;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .order__details{
+        color: var(--default-red);
+        text-decoration: underline;
+    }
+
+    .order__value{
+        align-self: end;
+    }
+
+    .list__item:nth-child(2n){
+        background-color: var(--card-red);
+    }
+
+    .shortcuts__box{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .shortcut__item{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .shortcut__icon, .shortcut__text{
+        color: var(--default-red);
+    }
+
+    .shortcut__icon{
+        font-size: 3vmin;
+        width: 30px;
+        height: 30px;
+    }
+
+    .shortcut__text{
+        font-size: 2vmin;
+        text-decoration: underline;
+    }
+
+    main{
+        margin-bottom: 5rem;
+    }
+}   

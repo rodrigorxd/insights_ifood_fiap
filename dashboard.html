@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="/css/dashboard/styles.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/filter.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="css/chat/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Insights | Dashboard</title>
+</head>
+<body>
+    <div class="outer__wrapper">
+        <div class="chat__wrapper">
+            <div class="chat__title">Chat</div>
+            <main class="chat__body"></main>
+            <div class="chat__footer">
+                <form action="" class="form__box">
+                    <div class="input__box">
+                        <input type="text" name="mensagem" id="mensagem" placeholder="Digite a mensagem">
+                        <button type="submit" class="send__button"><i class="fa-solid fa-share send__icon" ></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="outer__wrapper--button">
+        <div class="chat__wrapper--button">
+            <button type="button" class="chat__title--button" onclick="openChatWindow()">Chat</button>
+        </div>
+    </div>
+    <nav class="sidebar__box">
+        <div class="company__box">
+            <img src="./assets/dashboard/logoRestaurante.png" alt="Logotipo empresa" class="company__logo">
+            <p class="company__name">Fiap Sushi</p>
+        </div>
+        <ul class="menu__box first">
+            <li><a href="dashboard.html" class="menu__button">
+                <i class="fa-solid fa-house menu__icon"></i>
+                <span class="menu__text">Dashboard</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="clientes.html" class="menu__button">
+                <i class="fa-solid fa-star menu__icon"></i>
+                <span class="menu__text">Clientes</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="pedidos.html" class="menu__button">
+                <i class="fa-solid fa-receipt menu__icon"></i>
+                <span class="menu__text">Pedidos</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="financeiro.html" class="menu__button">
+                <i class="fa-solid fa-building-columns menu__icon"></i>
+                <span class="menu__text">Financeiro</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="transacoes.html" class="menu__button">
+                <i class="fa-solid fa-money-bill-transfer menu__icon"></i>
+                <span class="menu__text">Transações</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="seguranca.html" class="menu__button">
+                <i class="fa-solid fa-lock menu__icon"></i>
+                <span class="menu__text">Segurança</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="suporte.html" class="menu__button">
+                <i class="fa-solid fa-headset menu__icon"></i>
+                <span class="menu__text">Suporte</span>
+            </a></li>
+        </ul>
+        <ul class="menu__box">
+            <li><a href="plano.html" class="menu__button">
+                <i class="fa-solid fa-layer-group menu__icon"></i>
+                <span class="menu__text">Plano</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="sair.html" class="menu__button">
+                <i class="fa-solid fa-right-from-bracket menu__icon"></i>
+                <span class="menu__text">Sair</span>
+            </a></li>
+        </ul>
+    </nav>
+    <header class="header__box">
+        <div class="header__separator--one">
+            <h2 class="header__title">Dashboard</h2>
+        </div>
+        <div class="header__separator--two">
+            <img src="./assets/logo.svg" alt="Logotipo Insights" class="logo">
+        </div>
+        <div class="header__separator--three">
+            <div>
+                <i class="fa-solid fa-bell header__icon"></i>
+            </div>
+            <div class="user__box">
+                <i class="fa-solid fa-user header__icon"></i>
+                <select name="user" id="user" class="user__select">
+                    <option value="default__user" class="user__text">Usuário comum</option>
+                    <option value="super__user" class="user__text">Super usuário</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main class="main__box">
+        <article class="card__box one">
+            <div class="card__upper">
+                <span class="card__title">Saldo</span>
+                <a href="financeiro.html" class="see__more">
+                    Ver mais
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="card__middle">
+                <span class="card__value">R$ 1.337,28</span>
+            </div>
+            <div class="card__bottom--one">
+                <span class="bottom__one--content">Disponível para resgate</span>
+            </div>
+            <div class="card__bottom">
+                <span class="bottom__content green">R$ 28,28</span>
+            </div>
+        </article>
+        <article class="card__box two">
+            <div class="card__upper">
+                <span class="card__title">Seu plano</span>
+                <a href="plano.html" class="see__more">
+                    Ver mais
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="card__middle">
+                <span class="card__value">Básico</span>
+            </div>
+            <div class="card__bottom">
+                <span class="bottom__content">Você tem direito a relatórios <span class="span__color">mensais.</span></span>
+            </div>
+        </article>
+        <article class="card__box three">
+            <div class="card__upper">
+                <span class="card__title">Despesas</span>
+                <a href="financeiro.html" class="see__more">
+                    Ver mais
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="card__middle">
+                <span class="card__value">R$ 507,80</span>
+            </div>
+            <div class="card__bottom">
+                <i class="fa-regular fa-circle-down red"></i>
+                <span class="bottom__content red">-9,18% abril/24</span>
+            </div>
+        </article>
+        <article class="card__box four">
+            <div class="card__upper">
+                <span class="card__title">Receitas</span>
+                <a href="financeiro.html" class="see__more">
+                    Ver mais
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="card__middle">
+                <span class="card__value">R$ 2.018,28</span>
+            </div>
+            <div class="card__bottom">
+                <i class="fa-regular fa-circle-up green"></i>
+                <span class="bottom__content green">-9,18% abril/24</span>
+            </div>
+        </article>
+        <section class="graphic__box">
+            <div class="graphic__header">
+                <h3 class="subtitle">Balanço</h3>
+                <select name="filter" id="filter" class="graphic__filter">
+                    <option value="three__months" class="filter__name">Últimos 3 meses</option>
+                    <option value="last__year" class="filter__name">Último ano </option>
+                    <option value="last__month" class="filter__name">Últimos mês</option>
+                </select>
+            </div>
+            <img src="./assets/dashboard/Balanço financeiro.svg" alt="Gráfico financeiro" class="graphic__image">
+        </section>
+        <aside class="aside__box">
+            <div class="aside__header">
+                <h3 class="subtitle">Transações</h3>
+                <a href="transacoes.html" class="see__more">
+                    Ver mais
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            <div class="aside__filter">
+                <a href="" class="filter__text active">Todos</a>
+                <a href="" class="filter__text">Ganhos</a>
+                <a href="" class="filter__text">Despesas</a>
+            </div>
+            <article class="list__item">
+                <p class="order__title">Pedido #282828</p>
+                <p class="order__value">+R$ 107,50</p>
+                <a href=""><p class="order__details">Ver pedido</p></a>
+            </article>
+            <article class="list__item">
+                <p class="order__title">Pedido #282828</p>
+                <p class="order__value">+R$ 107,50</p>
+                <a href=""><p class="order__details">Ver pedido</p></a>
+            </article>
+            <article class="list__item">
+                <p class="order__title">Pedido #282828</p>
+                <p class="order__value">+R$ 107,50</p>
+                <a href=""><p class="order__details">Ver pedido</p></a>
+            </article>
+            <article class="list__item">
+                <p class="order__title">Pedido #282828</p>
+                <p class="order__value">+R$ 107,50</p>
+                <a href=""><p class="order__details">Ver pedido</p></a>
+            </article>
+            <article class="list__item">
+                <p class="order__title">Pedido #282828</p>
+                <p class="order__value">+R$ 107,50</p>
+                <a href=""><p class="order__details">Ver pedido</p></a>
+            </article>
+            <article class="list__item">
+                <p class="order__title">Pedido #282828</p>
+                <p class="order__value">+R$ 107,50</p>
+                <a href=""><p class="order__details">Ver pedido</p></a>
+            </article>
+            <section class="shortcuts__box">
+                <h3 class="subtitle shortcuts__title">Atalhos</h3>
+                <div class="shortcut__item--box">
+                    <a href="" class="shortcut__item">
+                        <i class="fa-solid fa-credit-card shortcut__icon"></i>
+                        <span class="shortcut__text">Reembolso</span>
+                    </a>
+                </div>
+                <div class="shortcut__item--box">
+                    <a href="" class="shortcut__item">
+                        <i class="fa-solid fa-file-invoice-dollar shortcut__icon"></i>
+                        <span class="shortcut__text">Ajuste de saldo</span>
+                    </a>
+                </div>
+                <div class="shortcut__item--box">
+                    <a href="" class="shortcut__item">
+                        <i class="fa-solid fa-users shortcut__icon"></i>
+                        <span class="shortcut__text">Trocar usuário</span>
+                    </a>
+                </div>
+                <div class="shortcut__item--box">
+                    <a href="" class="shortcut__item">
+                        <i class="fa-solid fa-chart-line shortcut__icon"></i>
+                        <span class="shortcut__text">Gerar relatório</span>
+                    </a>
+                </div>
+            </section>
+        </aside>
+    </main>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

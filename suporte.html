@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="/css/suporte/styles.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/filter.css">
+    <link rel="stylesheet" href="css/chat/styles.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Insights | Suporte</title>
+</head>
+<body>
+    <div class="outer__wrapper">
+        <div class="chat__wrapper">
+            <div class="chat__title">Chat</div>
+            <main class="chat__body"></main>
+            <div class="chat__footer">
+                <form action="" class="form__box">
+                    <div class="input__box">
+                        <input type="text" name="mensagem" id="mensagem" placeholder="Digite a mensagem">
+                        <button type="submit" class="send__button"><i class="fa-solid fa-share send__icon" ></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="outer__wrapper--button">
+        <div class="chat__wrapper--button">
+            <button type="button" class="chat__title--button" onclick="openChatWindow()">Chat</button>
+        </div>
+    </div>
+    <nav class="sidebar__box">
+        <div class="company__box">
+            <img src="./assets/dashboard/logoRestaurante.png" alt="Logotipo empresa" class="company__logo">
+            <p class="company__name">Fiap Sushi</p>
+        </div>
+        <ul class="menu__box first">
+            <li><a href="dashboard.html" class="menu__button">
+                <i class="fa-solid fa-house menu__icon"></i>
+                <span class="menu__text">Dashboard</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="clientes.html" class="menu__button">
+                <i class="fa-solid fa-star menu__icon"></i>
+                <span class="menu__text">Clientes</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="pedidos.html" class="menu__button">
+                <i class="fa-solid fa-receipt menu__icon"></i>
+                <span class="menu__text">Pedidos</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="financeiro.html" class="menu__button">
+                <i class="fa-solid fa-building-columns menu__icon"></i>
+                <span class="menu__text">Financeiro</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="transacoes.html" class="menu__button">
+                <i class="fa-solid fa-money-bill-transfer menu__icon"></i>
+                <span class="menu__text">Transações</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="seguranca.html" class="menu__button">
+                <i class="fa-solid fa-lock menu__icon"></i>
+                <span class="menu__text">Segurança</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="suporte.html" class="menu__button">
+                <i class="fa-solid fa-headset menu__icon"></i>
+                <span class="menu__text">Suporte</span>
+            </a></li>
+        </ul>
+        <ul class="menu__box">
+            <li><a href="plano.html" class="menu__button">
+                <i class="fa-solid fa-layer-group menu__icon"></i>
+                <span class="menu__text">Plano</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="sair.html" class="menu__button">
+                <i class="fa-solid fa-right-from-bracket menu__icon"></i>
+                <span class="menu__text">Sair</span>
+            </a></li>
+        </ul>
+    </nav>
+    <header class="header__box">
+        <div class="header__separator--one">
+            <h2 class="header__title">Suporte</h2>
+        </div>
+        <div class="header__separator--two">
+            <img src="./assets/logo.svg" alt="Logotipo Insights" class="logo">
+        </div>
+        <div class="header__separator--three">
+            <div>
+                <i class="fa-solid fa-bell header__icon"></i>
+            </div>
+            <div class="user__box">
+                <i class="fa-solid fa-user header__icon"></i>
+                <select name="user" id="user" class="user__select">
+                    <option value="default__user" class="user__text">Usuário comum</option>
+                    <option value="super__user" class="user__text">Super usuário</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main class="main__box2">
+        <div>
+            <a class="support__link" href="https://parceiros.ifood.com.br/restaurante/ajuda">Clique e acesse o portal de suporte</a>
+        </div>
+        <div class="">
+            ou
+        </div>
+        <div>
+            Comece um chat abaixo
+        </div>
+    </main>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

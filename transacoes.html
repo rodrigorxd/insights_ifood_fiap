@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/filter.css">
+    <link rel="stylesheet" href="/css/transacoes/styles.css">
+    <link rel="stylesheet" href="css/chat/styles.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Insights | Transaçoes</title>
+</head>
+<body>
+    <div class="outer__wrapper">
+        <div class="chat__wrapper">
+            <div class="chat__title">Chat</div>
+            <main class="chat__body"></main>
+            <div class="chat__footer">
+                <form action="" class="form__box">
+                    <div class="input__box">
+                        <input type="text" name="mensagem" id="mensagem" placeholder="Digite a mensagem">
+                        <button type="submit" class="send__button"><i class="fa-solid fa-share send__icon" ></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="outer__wrapper--button">
+        <div class="chat__wrapper--button">
+            <button type="button" class="chat__title--button" onclick="openChatWindow()">Chat</button>
+        </div>
+    </div>
+    <nav class="sidebar__box">
+        <div class="company__box">
+            <img src="./assets/dashboard/logoRestaurante.png" alt="Logotipo empresa" class="company__logo">
+            <p class="company__name">Fiap Sushi</p>
+        </div>
+        <ul class="menu__box first">
+            <li><a href="dashboard.html" class="menu__button">
+                <i class="fa-solid fa-house menu__icon"></i>
+                <span class="menu__text">Dashboard</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="clientes.html" class="menu__button">
+                <i class="fa-solid fa-star menu__icon"></i>
+                <span class="menu__text">Clientes</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="pedidos.html" class="menu__button">
+                <i class="fa-solid fa-receipt menu__icon"></i>
+                <span class="menu__text">Pedidos</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="financeiro.html" class="menu__button">
+                <i class="fa-solid fa-building-columns menu__icon"></i>
+                <span class="menu__text">Financeiro</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="transacoes.html" class="menu__button">
+                <i class="fa-solid fa-money-bill-transfer menu__icon"></i>
+                <span class="menu__text">Transações</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="seguranca.html" class="menu__button">
+                <i class="fa-solid fa-lock menu__icon"></i>
+                <span class="menu__text">Segurança</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="suporte.html" class="menu__button">
+                <i class="fa-solid fa-headset menu__icon"></i>
+                <span class="menu__text">Suporte</span>
+            </a></li>
+        </ul>
+        <ul class="menu__box">
+            <li><a href="plano.html" class="menu__button">
+                <i class="fa-solid fa-layer-group menu__icon"></i>
+                <span class="menu__text">Plano</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="sair.html" class="menu__button">
+                <i class="fa-solid fa-right-from-bracket menu__icon"></i>
+                <span class="menu__text">Sair</span>
+            </a></li>
+        </ul>
+    </nav>
+    <header class="header__box">
+        <div class="header__separator--one">
+            <h2 class="header__title">Transações</h2>
+        </div>
+        <div class="header__separator--two">
+            <img src="./assets/logo.svg" alt="Logotipo Insights" class="logo">
+        </div>
+        <div class="header__separator--three">
+            <div>
+                <i class="fa-solid fa-bell header__icon"></i>
+            </div>
+            <div class="user__box">
+                <i class="fa-solid fa-user header__icon"></i>
+                <select name="user" id="user" class="user__select">
+                    <option value="default__user" class="user__text">Usuário comum</option>
+                    <option value="super__user" class="user__text">Super usuário</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main class="main__box">
+        <div class="bank__wrapper">
+            <section class="first__bank">
+                <h3 class="subtitle">Banco</h3>
+                <span class="main__value green">R$ 3017,90</span>
+                <span class="pendent__value">R$ 1017,90</span>
+                <span class="pendent__description">Aguardando liberação</span>
+            </section>
+            <section class="second__bank bank__button--box">
+                <div class="button__wrapper">
+                    <button class="bank__button">Sacar</button>
+                    <button class="bank__button">Depositar</button>
+                </div>
+                <div class="button__wrapper">
+                    <button class="bank__button">Transferir</button>
+                    <button class="bank__button">Pix</button>
+                </div>
+            </section>
+            <section class="third__bank bank__button--box">
+                <div class="button__wrapper">
+                    <button class="bank__button">Conta iFood</button>
+                    <button class="bank__button">Reembolso</button>
+                </div>
+                <div class="button__wrapper">
+                    <button class="bank__button">Antecipar</button>
+                    <button class="bank__button">Mudar conta</button>
+                </div>
+            </section>
+        </div>
+        <section class="transaction__wrapper">
+            <h3 class="subtitle t__title">Transações</h3>
+            <form action="" class="form__box">
+                <input type="text" name="transacao" id="transacao" placeholder="Buscar transação">
+            </form>
+            <div class="filter__box">
+                <select name="filter" id="filter" class="graphic__filter">
+                    <option value="all__transactions" class="filter__name">Todos</option>
+                    <option value="adjust" class="filter__name">Ajuste de saldo</option>
+                    <option value="earnings" class="filter__name">Receitas</option>
+                    <option value="spends" class="filter__name">Despesas</option>
+                    <option value="refunds" class="filter__name">Reembolsos</option>
+                </select>
+                <select name="filter" id="filter" class="graphic__filter">
+                    <option value="three__months" class="filter__name">Últimos 3 meses</option>
+                    <option value="last__year" class="filter__name">Último ano </option>
+                    <option value="last__month" class="filter__name">Últimos mês</option>
+                </select>
+                <select name="filter" id="filter" class="graphic__filter">
+                    <option value="ascendent" class="filter__name">Menor p/ maior</option>
+                    <option value="descendent" class="filter__name">Maior p/ menor</option>
+                </select>
+                <select name="filter" id="filter" class="graphic__filter">
+                    <option value="recent" class="filter__name">Mais recente</option>
+                    <option value="oldest" class="filter__name">Mais antigo</option>
+                </select>          
+            </div>
+            <div class="labels__box">
+                <span class="label__type">Tipo</span>
+                <span class="label__detail">Detalhes</span>
+                <span class="label__id">ID</span>
+                <span class="label__date">Data</span>
+                <span class="label__value">Valor</span>
+            </div>
+            <div class="transactions__box">
+                <div class="transaction__item">
+                    <span class="type__text">Ajuste de saldo</span>
+                    <span class="detail__text see__more">ver mais
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                    <span class="id__text">#1236</span>
+                    <span class="date__text">23/03/2024</span>
+                    <span class="value__text">113,40</span>
+                </div>
+                <div class="transaction__item">
+                    <span class="type__text">Ajuste de saldo</span>
+                    <span class="detail__text see__more">ver mais
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                    <span class="id__text">#1236</span>
+                    <span class="date__text">23/03/2024</span>
+                    <span class="value__text">113,40</span>
+                </div>
+                <div class="transaction__item">
+                    <span class="type__text">Ajuste de saldo</span>
+                    <span class="detail__text see__more">ver mais
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                    <span class="id__text">#1236</span>
+                    <span class="date__text">23/03/2024</span>
+                    <span class="value__text">113,40</span>
+                </div>
+                <div class="transaction__item">
+                    <span class="type__text">Ajuste de saldo</span>
+                    <span class="detail__text see__more">ver mais
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                    <span class="id__text">#1236</span>
+                    <span class="date__text">23/03/2024</span>
+                    <span class="value__text">113,40</span>
+                </div>
+                <div class="transaction__item">
+                    <span class="type__text">Ajuste de saldo</span>
+                    <span class="detail__text see__more">ver mais
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                    <span class="id__text">#1236</span>
+                    <span class="date__text">23/03/2024</span>
+                    <span class="value__text">113,40</span>
+                </div>
+                <div class="transaction__item">
+                    <span class="type__text">Ajuste de saldo</span>
+                    <span class="detail__text see__more">ver mais
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                    <span class="id__text">#1236</span>
+                    <span class="date__text">23/03/2024</span>
+                    <span class="value__text">113,40</span>
+                </div>
+                <div class="transaction__item">
+                    <span class="type__text">Ajuste de saldo</span>
+                    <span class="detail__text see__more">ver mais
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                    <span class="id__text">#1236</span>
+                    <span class="date__text">23/03/2024</span>
+                    <span class="value__text">113,40</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>

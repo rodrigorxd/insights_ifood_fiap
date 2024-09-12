@@ -1,0 +1,62 @@
+@font-face{
+    font-family: title-bold;
+    src: url("/fonts/iFoodRCTitulos-Bold.ttf");
+}
+
+@font-face{
+    font-family: title-regular;
+    src: url("/fonts/iFoodRCTitulos-Regular.ttf");
+}
+
+@font-face{
+    font-family: text-bold;
+    src: url("/fonts/iFoodRCTextos-Bold.ttf");
+}
+
+@font-face{
+    font-family: text-regular;
+    src: url("/fonts/iFoodRCTextos-Regular.ttf");
+}
+
+@font-face{
+    font-family: text-light;
+    src: url("/fonts/iFoodRCTextos-Light.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root{
+    --card-red: rgba(235, 0, 51, 20%);
+    --default-red: #EB0033;
+    --main-bg: #F7F7F7;
+    --dark-gray: #3F3D56;
+    --light-gray: #717171;
+    --dark-red: #890019;
+    --white: #FFF;
+    --green: #52C1BE;
+    --box-radius: 2rem;
+    --landing-radius: 0.4rem;
+    --dsbox-padding: 1.7rem;
+    --dsbox-title: 2rem;
+    --dsbox-value: 3rem;
+    --dsbox-content: 1.6rem;
+    --ds-selector-text: 1.4rem;
+    --ds-selector-padding: 1rem;
+    --ds-menu-padding: 3.4rem 2.6rem;
+    --ds-menu-font: 1.8rem;
+    --ds-menu-icon: 2.2rem;
+}

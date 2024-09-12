@@ -1,0 +1,103 @@
+@media (min-width: 320px) {
+    .main__box{
+        padding: 5.8rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .first__box{
+        display: none;
+    }
+
+    .card__separator{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card__external{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .data__name, .user__title{
+        font-size: 1.5rem;
+        font-family: text-bold;
+    }
+
+    .edit__button{
+        font-size: 1.7rem;
+        color: var(--default-red);
+    }
+
+    .external{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    label, .data__text{
+        font-size: 1.5rem;
+        font-family: "text-regular";
+    }
+
+    .slider{
+        transform: scale(2);
+        margin-right: 2rem;
+    }
+
+    .autentication__title{
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 720px) {
+    .first__box{
+        display: block;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "a a"
+        "b b"
+        "c c"
+        ;
+    }
+
+    .a{
+        grid-area: a;
+    }
+    .b{
+        grid-area: b;
+    }
+    .c{
+        grid-area: c;
+    }
+
+    .main__box{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "data user"
+        "permission permission"
+        "autentication autentitcation"
+        ;
+    }
+
+    .first__box{
+        grid-area: data;
+    }
+    .second__box{
+        grid-area: user;
+    }
+
+    .permission__wrapper{
+        grid-area: permission;
+    }
+
+    .autentication__wrapper{
+        grid-area: autentication;
+    }
+    .external{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+

@@ -1,0 +1,116 @@
+@media (min-width: 320px) {
+    .company__box, .menu__text, .logo{
+        display: none;
+    }
+    body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+        "side header"
+        "side main"
+        ;
+        height: 100vh;
+        font-family: text-bold;
+        background-color: var(--main-bg);
+    }
+    .sidebar__box{
+        display: flex;
+        flex-direction: column;
+        grid-area: side;
+        padding: 1rem;
+        background-color: var(--dark-red);
+    }
+
+    .menu__box{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .horizontal__rule{
+        height: 1px;
+        background-color: white;
+    }
+
+    .menu__icon{
+        width: 22px;
+        height: 22px;
+        font-size: 2.2rem;
+        color: white;
+    }
+
+    .first{
+        flex-grow: 1;
+    }
+
+    .header__box{
+        display: flex;
+        padding: 1rem;
+        grid-area: header;
+        justify-content: space-between;
+    }
+
+    .header__separator--three{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .header__title{
+        font-size: 3vmin;
+    }
+
+    .fa-bell, .fa-user{
+        font-size: 2vmin;
+
+    }
+
+    .user__box{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 2vmin;
+    }
+
+    .user__select{
+        border: none;
+        background-color: var(--main-bg);
+    }
+}
+
+@media (min-width: 1024px){
+    .company__box, .menu__text, .logo{
+        display: block;
+    }
+    .company__logo{
+        width: 100px;
+    }
+    .company__box{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        color: white;
+        font-size: 2vmin;
+    }
+
+    .sidebar__box{
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .menu__button{
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        gap: 2rem;
+    }
+
+    .header__box{
+        align-items: center;
+    }
+}

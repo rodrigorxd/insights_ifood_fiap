@@ -1,0 +1,15 @@
+@media (min-width: 320px) {
+    .filter__name{
+        font-size: 2vmin;
+        margin-right: 1rem;
+    }
+
+    .graphic__filter{
+        display: inline-block;
+        background-color: var(--card-red);
+        padding: .5rem;
+        margin-top: 1rem;
+        border: none;
+        font-family: text-bold;
+    }
+}

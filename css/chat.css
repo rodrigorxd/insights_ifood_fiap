@@ -1,0 +1,25 @@
+@media (min-width:320px){
+    .outer__wrapper--button{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px){
+    .outer__wrapper--button{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        right: 100px;
+    }
+    
+    .chat__title--button{
+        background-color: var(--default-red);
+        text-align: center;
+        padding: 1rem 3rem;
+        font-size: 1.5rem;
+        color: white;
+        width: 250px;
+        border: none;
+        font-family: text-bold;
+    }
+}

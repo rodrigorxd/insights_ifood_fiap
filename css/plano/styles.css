@@ -1,0 +1,80 @@
+@media (min-width: 320px){
+    .main__box2{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        font-size: 2rem;
+        font-family: text-bold;
+    }
+
+    .current__plan--box{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        padding: 1.5rem 4rem;
+        background-color: var(--card-red);
+    }
+
+    .current__plan--value, .plan__title, .upper{
+        text-transform: uppercase;
+    }
+
+    .plan__title, .plan__value{
+        font-size: 3rem;
+    }
+
+    .first__plan, .second__plan{
+        color: white;
+        padding: 2rem;
+        border-radius: var(--box-radius);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .plans__wrapper{
+        display: grid;
+        gap: 1rem;
+    }
+
+    .rule{
+        height: 2px;
+        background-color: white;
+    }
+
+    .first__plan{
+        background-color: var(--dark-red);
+    }
+
+    .second__plan{
+        background-color: var(--default-red);
+    }
+
+    .button__box{
+        text-align: center;
+    }
+
+    .choose__button{
+        background-color: white;
+        color: var(--default-red);
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: var(--landing-radius);
+    }
+}
+
+@media (min-width: 768px){
+    .plans__wrapper{
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .plan__box{
+        max-width: 323px;
+        max-height: 100%;
+    }
+}

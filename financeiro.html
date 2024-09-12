@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="/css/financeiro/styles.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <link rel="stylesheet" href="/css/filter.css">
+    <link rel="stylesheet" href="css/chat/styles.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Insights | Financeiro</title>
+</head>
+<body>
+    <div class="outer__wrapper">
+        <div class="chat__wrapper">
+            <div class="chat__title">Chat</div>
+            <main class="chat__body"></main>
+            <div class="chat__footer">
+                <form action="" class="form__box">
+                    <div class="input__box">
+                        <input type="text" name="mensagem" id="mensagem" placeholder="Digite a mensagem">
+                        <button type="submit" class="send__button"><i class="fa-solid fa-share send__icon" ></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="outer__wrapper--button">
+        <div class="chat__wrapper--button">
+            <button type="button" class="chat__title--button" onclick="openChatWindow()">Chat</button>
+        </div>
+    </div>
+    <nav class="sidebar__box">
+        <div class="company__box">
+            <img src="./assets/dashboard/logoRestaurante.png" alt="Logotipo empresa" class="company__logo">
+            <p class="company__name">Fiap Sushi</p>
+        </div>
+        <ul class="menu__box first">
+            <li><a href="dashboard.html" class="menu__button">
+                <i class="fa-solid fa-house menu__icon"></i>
+                <span class="menu__text">Dashboard</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="clientes.html" class="menu__button">
+                <i class="fa-solid fa-star menu__icon"></i>
+                <span class="menu__text">Clientes</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="pedidos.html" class="menu__button">
+                <i class="fa-solid fa-receipt menu__icon"></i>
+                <span class="menu__text">Pedidos</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="financeiro.html" class="menu__button">
+                <i class="fa-solid fa-building-columns menu__icon"></i>
+                <span class="menu__text">Financeiro</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="transacoes.html" class="menu__button">
+                <i class="fa-solid fa-money-bill-transfer menu__icon"></i>
+                <span class="menu__text">Transações</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="seguranca.html" class="menu__button">
+                <i class="fa-solid fa-lock menu__icon"></i>
+                <span class="menu__text">Segurança</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="suporte.html" class="menu__button">
+                <i class="fa-solid fa-headset menu__icon"></i>
+                <span class="menu__text">Suporte</span>
+            </a></li>
+        </ul>
+        <ul class="menu__box">
+            <li><a href="plano.html" class="menu__button">
+                <i class="fa-solid fa-layer-group menu__icon"></i>
+                <span class="menu__text">Plano</span>
+            </a></li>
+            <span class="horizontal__rule"></span>
+            <li><a href="sair.html" class="menu__button">
+                <i class="fa-solid fa-right-from-bracket menu__icon"></i>
+                <span class="menu__text">Sair</span>
+            </a></li>
+        </ul>
+    </nav>
+    <header class="header__box">
+        <div class="header__separator--one">
+            <h2 class="header__title">Financeiro</h2>
+        </div>
+        <div class="header__separator--two">
+            <img src="./assets/logo.svg" alt="Logotipo Insights" class="logo">
+        </div>
+        <div class="header__separator--three">
+            <div>
+                <i class="fa-solid fa-bell header__icon"></i>
+            </div>
+            <div class="user__box">
+                <i class="fa-solid fa-user header__icon"></i>
+                <select name="user" id="user" class="user__select">
+                    <option value="default__user" class="user__text">Usuário comum</option>
+                    <option value="super__user" class="user__text">Super usuário</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main class="main__box">
+        <article class="card__box one">
+            <div class="card__upper">
+                <span class="card__title">Saldo</span>
+                <a href="" class="see__more">
+                    Ajustar saldo
+                </a>
+            </div>
+            <div class="card__middle">
+                <span class="card__value">R$ 1.337,28</span>
+            </div>
+            <div class="card__bottom--one">
+                <span class="bottom__one--content">Disponível para resgate</span>
+            </div>
+            <div class="card__bottom">
+                <span class="bottom__content green">R$ 28,28</span>
+            </div>
+        </article>
+        <article class="card__box two">
+            <div class="card__upper">
+                <span class="card__title">Despesas</span>
+            </div>
+            <div class="card__middle">
+                <span class="card__value">R$ 507,80</span>
+            </div>
+            <div class="card__bottom">
+                <i class="fa-regular fa-circle-down red"></i>
+                <span class="bottom__content red">-9,18% abril/24</span>
+            </div>
+        </article>
+        <article class="card__box three">
+            <div class="card__upper">
+                <span class="card__title">Receitas</span>
+            </div>
+            <div class="card__middle">
+                <span class="card__value">R$ 2.018,8</span>
+            </div>
+            <div class="card__bottom">
+                <i class="fa-regular fa-circle-up green"></i>
+                <span class="bottom__content green">+5,18% abril/24</span>
+            </div>
+        </article>
+        <section class="graphic__box">
+            <div class="graphic__header">
+                <h3 class="subtitle">Histórico financeiro</h3>
+                <div class="filters__box">    
+                    <select name="filter" id="filter" class="graphic__filter">
+                        <option value="gains" class="filter__name">Receitas</option>
+                        <option value="spends" class="filter__name">Despesas</option>
+                    </select>
+                    <select name="filter" id="filter" class="graphic__filter">
+                        <option value="three__months" class="filter__name">Últimos 3 meses</option>
+                        <option value="last__year" class="filter__name">Último ano </option>
+                        <option value="last__month" class="filter__name">Últimos mês</option>
+                    </select>
+                </div>
+            </div>
+            <img src="./assets/financeiro/graficoReceitas.svg" alt="Gráfico financeiro" class="graphic__image">
+        </section>
+        <article class="data__box data__one">
+            <div class="data__title">
+                <h3 class="title__text">Taxas</h3>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Mensalidade*</h4>
+                <span class="item__value">R$ 110,00</span>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Venda</h4>
+                <span class="item__value">12%</span>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Pagamento iFood</h4>
+                <span class="item__value">3.2%</span>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Máquina pagamento</h4>
+                <span class="item__value see__more">editar</span>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Antecipação saque**</h4>
+                <span class="item__value">1.59%</span>
+            </div>
+            <div class="description__box">
+                <span class="description__content">*para rendimento acima de R$1.800 por mês</span>
+                <span class="description__content">**conta digital iFood - 1,19%</span>
+            </div>
+            <div class="data__title">
+                <h3 class="title__text empty"></h3>
+            </div>
+        </article>
+        <article class="data__box data__two">
+            <div class="data__title">
+                <h3 class="title__text">Despesas</h3>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Aluguel</h4>
+                <span class="item__value see__more">editar</span>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Entrega</h4>
+                <span class="item__value see__more">editar</span>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Funcionários</h4>
+                <span class="item__value see__more">editar</span>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Contas</h4>
+                <span class="item__value see__more">editar</span>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Estoque</h4>
+                <span class="item__value see__more">editar</span>
+            </div>
+            <div class="data__item">
+                <h4 class="item__name">Outros</h4>
+                <span class="item__value see__more">editar</span>
+            </div>
+            <div class="data__title">
+                <h3 class="title__text empty"></h3>
+            </div>
+        </article>
+        <section class="button__section--box">
+            <h3 class="subtitle">Gerar relatórios</h3>
+            <select name="filter" id="filter" class="graphic__filter">
+                <option value="three__months" class="filter__name">Últimos 3 meses</option>
+                <option value="last__year" class="filter__name">Último ano </option>
+                <option value="last__month" class="filter__name">Últimos mês</option>
+            </select>
+            <div class="button__box">
+                <button class="button__item">Análise desempenho financeiro</button>
+                <button class="button__item">Efeito de promoções</button>
+                <button class="button__item">Análise demanda sazonal</button>
+                <button class="button__item">Comparação períodos</button>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
